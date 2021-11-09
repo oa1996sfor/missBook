@@ -37,7 +37,11 @@ export default {
             this.search = ''
         },
         addBook(book){
-            eventBus.$emit('showMsg','book added :)')
+            const msg = {
+                txt: `The  book was Added!`,
+                type: 'success'
+            };
+            eventBus.$emit('showMsg',msg)
             bookService.addGoogleBook(book);
             
         }

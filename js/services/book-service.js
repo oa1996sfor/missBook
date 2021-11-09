@@ -532,6 +532,7 @@ function addGoogleBook(newBook){
             isOnSale: true,
         },
     };
+    console.log(googleBook);
     return storageService.post(BOOKS_KEY, googleBook);
 
 }
