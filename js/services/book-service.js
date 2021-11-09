@@ -2,6 +2,7 @@ import { storageService } from './async-storage-service.js';
 import { utilService } from './utils.js';
 
 
+
 export const bookService = {
     query,
     remove,
@@ -9,7 +10,9 @@ export const bookService = {
     getById,
     addReview,
     getNextBookId,
-    getPrevBookId
+    getPrevBookId,
+    searchGoogleBook,
+    addGoogleBook
 }
 
 
@@ -497,14 +500,41 @@ function getNextBookId(bookId) {
         });
 }
 
-function getPrevBookId(bookId) {
-    return query()
-    .then(books => {
-        const idx = books.findIndex(book => book.id === bookId);
-        return (idx === 0) ? books[books.length - 1].id : books[idx - 1].id;
-    });
+
+function searchGoogleBook(search) {
+    const url = `https://www.googleapis.com/books/v1/volumes?printType=books&q=${search}%20javascript`
+    return axios.get(url)
+        .then((res) => res.data)
+        .then(res=> res.items)
 }
 
+function getPrevBookId(bookId) {
+    return query()
+        .then(books => {
+            const idx = books.findIndex(book => book.id === bookId);
+            return (idx === 0) ? books[books.length - 1].id : books[idx - 1].id;
+        });
+}
+
+function addGoogleBook(newBook){
+    var googleBook = {
+        title: newBook.volumeInfo.title,
+        subtitle: 'Lorem ipsum dolor sit amet',
+        language: newBook.volumeInfo.language,
+        authors: newBook.volumeInfo.authors,
+        description: newBook.volumeInfo.description,
+        thumbnail: newBook.volumeInfo.imageLinks.thumbnail,
+        categories: ['computer'],
+        pageCount: newBook.volumeInfo.pageCount,
+        listPrice: {
+            currencyCode: 'EUR',
+            amount: 190,
+            isOnSale: true,
+        },
+    };
+    return storageService.post(BOOKS_KEY, googleBook);
+
+}
 
 
 function _createBooks() {

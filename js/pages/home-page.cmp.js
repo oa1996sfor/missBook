@@ -1,3 +1,5 @@
+import bookAdd from '../cmp/book-add.cmp.js';
+
 export default {
     template: `
         <section class="home-page app-main">
@@ -9,6 +11,10 @@ export default {
                 </h5>
             </div>    
             <img src="img/read.png">
+            <bookAdd/>
         </section>
-    `
+    `,
+    components: {
+        bookAdd
+    }
 }

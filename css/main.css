@@ -22,6 +22,24 @@ button {
     height: 25px;
 }
 
+.addBtn{
+    width: 20px;
+    border-radius: 100px;
+    margin-left: 5px;
+}
+
+.addBtn:hover{
+    background-color: seagreen;
+    transition: 0.4s;
+}
+
+
+.actions{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 .book-list {
     display: flex;
     align-items: center;
@@ -323,6 +341,10 @@ input {
     width: 80px;
     margin-left: 20px;
 }
+
+.search-input {
+    width: 150px;
+} 
 
 nav {
     float: right;
