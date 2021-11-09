@@ -1,0 +1,357 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h5{
+    text-align: center;
+}
+
+.book-app {
+    width: 100%;
+    margin: 0;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: lightsteelblue;
+    width: 80px;
+    cursor: pointer;
+    height: 25px;
+}
+
+.book-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px
+}
+
+
+
+.about-page {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin: 100px;
+    font-size: 20px;
+}
+
+.home-page {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin: 100px;
+    font-size: 20px;
+}
+
+.home-page h3 {
+    margin-bottom: 20px;
+}
+
+.app-footer {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.about-page h3 {
+    margin-bottom: 30px;
+}
+
+
+.default {
+    color: black;
+}
+
+.book-preview-container {
+    padding: 10px;
+    border: 1px solid rgb(89, 206, 12);
+    height: 200px;
+    width: 200px;
+    list-style: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.book-filter input {
+    height: 25px;
+    width: 150px;
+}
+
+.book-filter .txt {
+    width: 350px;
+}
+
+.book-filter {
+    text-align: center;
+    margin: 20px;
+    color: rgb(89, 206, 12);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+fieldset {
+    border: rgb(89, 206, 12) 2px solid;
+}
+
+.book-preview img {
+    padding-top: 10px;
+}
+
+.book-preview-container a {
+    text-decoration: none;
+    color: rgb(89, 206, 12);
+    font-weight: bolder;
+}
+
+
+
+.app-footer {
+    margin-top: 10px;
+    background-color: rgb(89, 206, 12);
+    height: 100px;
+    align-items: center;
+}
+
+.app-header {
+    background-color: rgb(89, 206, 12);
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.book-preview p span {
+    font-weight: bold;
+}
+
+.router-link-exact-active {
+    color: black
+}
+
+.speech-bubble {
+    position: relative;
+    background: rgb(89, 206, 12);
+    border-radius: .4em;
+    color: white;
+    height: 60px;
+    padding: 10px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: rgb(89, 206, 12);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.speech-bubble2 {
+    position: relative;
+    background: rgb(89, 206, 12);
+    border-radius: .4em;
+    color: white;
+    /* height: 60px; */
+    padding: 10px;
+}
+
+.speech-bubble2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: rgb(89, 206, 12);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.home-page img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    /* margin: auto; */
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.about-page img {
+    width: 200px;
+    height: 200px;
+}
+
+.name-input {
+    width: 200px;
+}
+
+.book-details span {
+    /* font-weight: bold; */
+    text-decoration: underline;
+    color: white;
+}
+
+
+span.checked {
+    color: orange;
+}
+
+.book-description button {
+    display: inline-block;
+    font-size: 10px;
+    height: 20px;
+}
+
+
+.reviews{
+    min-height: 170px;
+}
+
+.book-details {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(29, 29, 29, 0.555);
+    width: 750px;
+    height: 550px;
+    margin: auto;
+    list-style: none;
+    color: white;
+    /* margin-bottom: 40px; */
+}
+
+
+.details{
+    margin-bottom: 20px;
+}
+
+.user-msg {
+    position: absolute;
+    margin: auto;
+    top: 50px; 
+    right: 0;
+    padding: 10px;
+    height: 100px; 
+}
+
+
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.close-btn{
+    color: black;
+    float: right;
+    cursor: pointer;
+ 
+}
+
+.success {
+    background-color: rgb(179, 162, 13);
+}
+
+.error {
+    background-color: red;
+}
+
+/* animations */
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.form {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+.form-control {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.close-a {
+    float: right;
+    margin-top: 0px;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+input {
+    margin-bottom: 10px;
+    align-items: center;
+    width: 80px;
+    margin-left: 20px;
+}
+
+nav {
+    float: right;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.book-details ul {
+    list-style: none;
+}
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
